@@ -10,7 +10,7 @@ Este projeto é um servidor web simples construído com **Express.js** e **TypeS
 
 ## Estrutura do Projeto
 ```plaintext
-/seu-projeto
+/appExpressJs
 │
 ├── app.ts          # Arquivo principal do servidor
 ├── package.json    # Gerenciador de pacotes e scripts do projeto
