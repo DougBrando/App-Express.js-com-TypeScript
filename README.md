@@ -1,22 +1,31 @@
-# App Express.js com TypeScript
+# App Express.js com TypeScript e Bootstrap
 
-Este projeto é um servidor web simples construído com **Express.js** e **TypeScript**. O objetivo é demonstrar como configurar um servidor básico utilizando essas tecnologias.
+Este projeto é um servidor web simples construído com **Express.js**, **TypeScript** e **Bootstrap**. O objetivo é demonstrar como configurar um servidor básico utilizando essas tecnologias, além de criar páginas web responsivas e estilizadas.
 
 ## Tecnologias Utilizadas
 
 - **Node.js**: Ambiente de execução para JavaScript no lado do servidor.
 - **Express.js**: Framework web para Node.js que facilita a criação de servidores.
 - **TypeScript**: Superset do JavaScript que adiciona tipagem estática e outros recursos.
+- **Bootstrap**: Framework CSS para estilização responsiva e moderna.
 
 ## Estrutura do Projeto
+
 ```plaintext
 /appExpressJs
 │
-├── app.ts          # Arquivo principal do servidor
-├── package.json    # Gerenciador de pacotes e scripts do projeto
-└── tsconfig.json   # Configurações do TypeScript
+├── Controller
+│   └── clientsControllers.ts   # Controlador com as funções de renderização
+├── Router
+│   └── clients.ts               # Arquivo de rotas
+├── Views
+│   ├── contato.pug              # View para a página de contato
+│   ├── index.pug                # View para a página inicial
+│   └── sobre.pug                # View para a página "Sobre"
+├── app.ts                       # Arquivo principal do servidor
+├── package.json                 # Gerenciador de pacotes e scripts do projeto
+└── tsconfig.json                # Configurações do TypeScript
 ```
-
 
 ## Processo de Criação
 
@@ -50,7 +59,16 @@ Este projeto é um servidor web simples construído com **Express.js** e **TypeS
      npm install @types/express -D
      ```
 
-6. **Execução do Servidor**:
+6. **Instalação do Pug**:
+   - Instale o Pug como motor de template:
+     ```bash
+     npm install pug
+     ```
+
+7. **Instalação do Bootstrap**:
+   - Para usar o Bootstrap, você pode incluir o CSS diretamente nas views através de um CDN, como mostrado nos arquivos Pug.
+
+8. **Execução do Servidor**:
    - Para iniciar o servidor, adicione o seguinte script ao seu `package.json`:
      ```json
      "scripts": {
@@ -64,6 +82,12 @@ Este projeto é um servidor web simples construído com **Express.js** e **TypeS
 
 Após a execução, você verá a mensagem `Servidor criado na porta 3000` no console. Você pode acessar o servidor em seu navegador ou usando uma ferramenta como Postman em `http://localhost:3000`.
 
+## Rotas
+
+- **`/`**: Página inicial (index).
+- **`/contact`**: Página de contato.
+- **`/sobre`**: Página "Sobre".
+
 ## Contribuição
 
 Sinta-se à vontade para contribuir com este projeto! Você pode abrir issues ou enviar pull requests.
@@ -71,3 +95,4 @@ Sinta-se à vontade para contribuir com este projeto! Você pode abrir issues ou
 ## Licença
 
 Este projeto está licenciado sob a [Licença ISC](LICENSE).
+
